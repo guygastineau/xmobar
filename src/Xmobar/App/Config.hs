@@ -36,35 +36,35 @@ import Xmobar.Run.Runnable
 -- | The default configuration values
 defaultConfig :: Config
 defaultConfig =
-    Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
-           , additionalFonts = []
-           , wmClass = "xmobar"
-           , wmName = "xmobar"
-           , bgColor = "#000000"
-           , fgColor = "#BFBFBF"
-           , alpha   = 255
-           , position = Top
-           , border = NoBorder
-           , borderColor = "#BFBFBF"
-           , borderWidth = 1
-           , textOffset = -1
-           , iconOffset = -1
-           , textOffsets = []
-           , hideOnStart = False
-           , lowerOnStart = True
-           , persistent = False
-           , allDesktops = True
-           , overrideRedirect = True
-           , pickBroadest = False
-           , iconRoot = "."
-           , commands = [ Run $ Date "%a %b %_d %Y * %H:%M:%S" "theDate" 10
-                        , Run StdinReader]
-           , sepChar = "%"
-           , alignSep = "}{"
-           , template = "%StdinReader% }{ " ++
-                        "<fc=#00FF00>%uname%</fc> * <fc=#FF0000>%theDate%</fc>"
-           , verbose = False
-           }
+    ConfigF { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
+            , additionalFonts = []
+            , wmClass = "xmobar"
+            , wmName = "xmobar"
+            , bgColor = "#000000"
+            , fgColor = "#BFBFBF"
+            , alpha   = 255
+            , position = Top
+            , border = NoBorder
+            , borderColor = "#BFBFBF"
+            , borderWidth = 1
+            , textOffset = -1
+            , iconOffset = -1
+            , textOffsets = []
+            , hideOnStart = False
+            , lowerOnStart = True
+            , persistent = False
+            , allDesktops = True
+            , overrideRedirect = True
+            , pickBroadest = False
+            , iconRoot = "."
+            , commands = [ Run $ Date "%a %b %_d %Y * %H:%M:%S" "theDate" 10
+                         , Run StdinReader]
+            , sepChar = "%"
+            , alignSep = "}{"
+            , template = "%StdinReader% }{ " ++
+                         "<fc=#00FF00>%uname%</fc> * <fc=#FF0000>%theDate%</fc>"
+            , verbose = False
+            }
 
 -- | Return the path to the xmobar data directory.  This directory is
 -- used by Xmobar to store data files such as the run-time state file

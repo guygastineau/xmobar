@@ -1,4 +1,4 @@
-{-# LANGUAGE FlexibleContexts, CPP #-}
+{-# LANGUAGE FlexibleContexts, CPP, TypeApplications #-}
 ------------------------------------------------------------------------------
 -- |
 -- Module: Xmobar.Config.Parse
@@ -59,7 +59,7 @@ parseConfig defaultConfig =
         s <- getState
         return (x,s)
 
-      perms = permute $ Config
+      perms = permute $ ConfigF
               <$?> pFont <|?> pFontList <|?> pWmClass <|?> pWmName
               <|?> pBgColor <|?> pFgColor
               <|?> pPosition <|?> pTextOffset <|?> pTextOffsets
