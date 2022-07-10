@@ -7,7 +7,7 @@ loot at [[../examples/xmobar.hs][examples/xmobar.hs]] or, for a more complicated
 [[https://gitlab.com/jaor/xmobar-config/][the author's configuration]].
 
 There is also an example of a config using the configuration language
-available [[http://github.com/jaor/xmobar/raw/master/examples/xmobar.config][here]].
+available [[https://codeberg.org/jao/xmobar/src/branch/master/examples/xmobar.config][here]].
 
 * Command Line Options
 
@@ -410,11 +410,11 @@ available [[http://github.com/jaor/xmobar/raw/master/examples/xmobar.config][her
 
 *** Dynamically sizing xmobar
 
- See [[https://github.com/jaor/xmobar/issues/239#issuecomment-233206552][this idea]] by Jonas Camillus Jeppensen for a way of adapting
- dynamically xmobar's size and run it alongside a system tray widget such
- as trayer or stalonetray (although the idea is not limited to trays,
- really). For your convenience, there is a version of Jonas' script in
- [[../examples/padding-icon.sh][examples/padding-icon.sh]].
+    See [[https://codeberg.org/jao/xmobar/issues/239#issuecomment-233206552][this idea]] by Jonas Camillus Jeppensen for a way of adapting
+    dynamically xmobar's size and run it alongside a system tray widget such
+    as trayer or stalonetray (although the idea is not limited to trays,
+    really). For your convenience, there is a version of Jonas' script in
+    [[../examples/padding-icon.sh][examples/padding-icon.sh]].
 
 *** Signal Handling
 
@@ -426,15 +426,14 @@ available [[http://github.com/jaor/xmobar/raw/master/examples/xmobar.config][her
       screen.
 * The DBus Interface
 
-  When compiled with the optional =with_dbus= flag, xmobar can be
-  controlled over dbus. All signals defined in [[https://github.com/jaor/xmobar/blob/master/src/Xmobar/System/Signal.hs][src/Signal.hs]] as =data
-  SignalType= can now be sent over dbus to xmobar.
+  When compiled with the optional =with_dbus= flag, xmobar can be controlled
+  over dbus. All signals defined in [[../src/Xmobar/System/Signal.hs][src/Signal.hs]] as =data SignalType= can now
+  be sent over dbus to xmobar.
 
-  Due to current limitations of the implementation only one process of
-  xmobar can acquire the dbus. This is handled on a
-  first-come-first-served basis, meaning that the first process will
-  get the dbus interface. Other processes will run without further
-  problems, yet have no dbus interface.
+  Due to current limitations of the implementation only one process of xmobar
+  can acquire the dbus. This is handled on a first-come-first-served basis,
+  meaning that the first process will get the dbus interface. Other processes
+  will run without further problems, yet have no dbus interface.
 
   - Bus Name: =org.Xmobar.Control=
   - Object Path: =/org/Xmobar/Control=

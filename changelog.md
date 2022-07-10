@@ -1,3 +1,7 @@
+## Version 0.45 (unreleased)
+
+Repository moved to Codeberg.
+
 ## Version 0.44 (July, 2022)
 
 _Breaking changes_
@@ -191,7 +195,7 @@ _Bug fixes_
    - Fixed compilation with GHC 8.8.x (thanks to Vanessa McHale).
    - Avoid creating `~/.xmobar` ([issue #405]).
 
-[issue #405]: https://github.com/jaor/xmobar/issues/405
+[issue #405]: https://codeberg.org/jao/xmobar/issues/405
 
 ## Version 0.31 (October, 2019)
 
@@ -201,7 +205,7 @@ _New features_
     without padding (see [issue #388]).
   - New version of libmpd (0.9.0.10), thanks to John Tyree
 
-[issue #388]: https://github.com/jaor/xmobar/issues/388
+[issue #388]: https://codeberg.org/jao/xmobar/issues/388
 
 ## Version 0.30 (August, 2019)
 
@@ -216,7 +220,7 @@ _New features_
     specify a system command executed if battery left goes beyond a
     given threshold.
 
-[issue #390]: https://github.com/jaor/xmobar/issues/390
+[issue #390]: https://codeberg.org/jao/xmobar/issues/390
 
 ## Version 0.29.5 (March, 2019)
 
@@ -240,7 +244,7 @@ _Bug fixes_
 
   - Upper bound for alsa_mixer (see [issue #372])
 
-[issue #372]: https://github.com/jaor/xmobar/issues/372
+[issue #372]: https://codeberg.org/jao/xmobar/issues/372
 
 ## Version 0.29.2 (December, 2018)
 
@@ -248,7 +252,7 @@ _Bug fixes_
 
   - Work as usual with .xmobarrc (see [issue #371]).
 
-[issue #371]: https://github.com/jaor/xmobar/issues/371
+[issue #371]: https://codeberg.org/jao/xmobar/issues/371
 
 ## Version 0.29.1 (December, 2018)
 
@@ -257,7 +261,7 @@ _Bug fixes_
   - Honour command line flags (fixes [issue #370]).
   - Expose Cmd and CmdX in Xmobar interface.
 
-[issue #370]: https://github.com/jaor/xmobar/issues/370
+[issue #370]: https://codeberg.org/jao/xmobar/issues/370
 
 ## Version 0.29 (December, 2018)
 
@@ -278,13 +282,13 @@ _Bug fixes_
 
   - Correctly parsing configuration options `mwClass` and `wmName`.
 
-[issue #369]: https://github.com/jaor/xmobar/issues/369
+[issue #369]: https://codeberg.org/jao/xmobar/issues/369
 
 ## Version 0.28.1 (October, 2018)
 
 Dependencies updated to work with GHC 8.6, avoiding [issue #354].
 
-[issue #354]: https://github.com/jaor/xmobar/issues/354
+[issue #354]: https://codeberg.org/jao/xmobar/issues/354
 
 ## Version 0.28 (August, 2018)
 
@@ -296,7 +300,7 @@ _Bug fixes_
 
   - hinotify version upgraded ([issue #356])
 
-[issue #356]: https://github.com/jaor/xmobar/issues/356
+[issue #356]: https://codeberg.org/jao/xmobar/issues/356
 
 ## Version 0.27 (July, 2018)
 
@@ -312,8 +316,8 @@ _Bug fixes_
    - Use the maximum width options `-T` and `-E` correctly when a
      monitor subtemplate contains font and color tags.
 
-[issue #311]: https://github.com/jaor/xmobar/issues/311
-[issue #352]: https://github.com/jaor/xmobar/issues/352
+[issue #311]: https://codeberg.org/jao/xmobar/issues/311
+[issue #352]: https://codeberg.org/jao/xmobar/issues/352
 
 ## Version 0.26 (April, 2018)
 
@@ -331,9 +335,9 @@ _Bug fixes_
   - Race condition in network monitor fixed ([issue #347]).
   - Limiting dbus supported version (see [issue #346]).
 
-[issue #335]: https://github.com/jaor/xmobar/issues/335
-[issue #346]: https://github.com/jaor/xmobar/issues/346
-[issue #347]: https://github.com/jaor/xmobar/issues/347
+[issue #335]: https://codeberg.org/jao/xmobar/issues/335
+[issue #346]: https://codeberg.org/jao/xmobar/issues/346
+[issue #347]: https://codeberg.org/jao/xmobar/issues/347
 
 ## Version 0.25 (February, 2018)
 
@@ -349,8 +353,8 @@ _Bug fixes_
    - Honouring -x in MPris monitor ([issue #325])
 
 
-[issue #323]: https://github.com/jaor/xmobar/issues/323
-[issue #325]: https://github.com/jaor/xmobar/issues/325
+[issue #323]: https://codeberg.org/jao/xmobar/issues/323
+[issue #325]: https://codeberg.org/jao/xmobar/issues/325
 
 ## Version 0.24.5 (May, 2017)
 
@@ -358,7 +362,7 @@ _Bug fixes_
 
   - Fix for vertical bars ([issue #303])
 
-[issue #303]: https://github.com/jaor/xmobar/issues/303
+[issue #303]: https://codeberg.org/jao/xmobar/issues/303
 
 ## Version 0.24.4 (April, 2017)
 
@@ -378,7 +382,7 @@ _Bug fixes_
   - Better fatal error messages (Michael Bishop).
   - More paths to read from in CoreTemp (see [issue #291]).
 
-[issue #291]: https://github.com/jaor/xmobar/issues/291
+[issue #291]: https://codeberg.org/jao/xmobar/issues/291
 
 ## Version 0.24.3 (Sep 5, 2016)
 
@@ -387,7 +391,7 @@ _Bug fixes_
   - Battery monitor: fixes for cases where status is not consistently
     reported by the kernel (see [issue #271]).
 
-[issue #271]: https://github.com/jaor/xmobar/issues/271
+[issue #271]: https://codeberg.org/jao/xmobar/issues/271
 
 ## Version 0.24.2 (Aug 8, 2016)
 
@@ -395,7 +399,7 @@ _Bug fixes_
 
    - New Weather plugin URL (see [issue #270]).
 
-[issue #270]: https://github.com/jaor/xmobar/issues/270
+[issue #270]: https://codeberg.org/jao/xmobar/issues/270
 
 ## Version 0.24.1 (Jul 28, 2016)
 
@@ -403,7 +407,7 @@ _Bug fixes_
 
    - Restoring compatibility with GHC 7.6, (see [issue #269]).
 
-[issue #269]: https://github.com/jaor/xmobar/issues/269
+[issue #269]: https://codeberg.org/jao/xmobar/issues/269
 
 ## Version 0.24 (Jul 26, 2016)
 
@@ -438,9 +442,9 @@ _Bug fixes_
    - `Batt`: sensible thresholds for high/low power consumption (see
      [issue #265]).
 
-[issue #231]: https://github.com/jaor/xmobar/issues/225
-[issue #265]: https://github.com/jaor/xmobar/issues/225
-[issue #268]: https://github.com/jaor/xmobar/issues/268
+[issue #231]: https://codeberg.org/jao/xmobar/issues/225
+[issue #265]: https://codeberg.org/jao/xmobar/issues/225
+[issue #268]: https://codeberg.org/jao/xmobar/issues/268
 
 ## Version 0.23.1 (Apr 14, 2015)
 
@@ -453,10 +457,10 @@ _Bug fixes_
   - Compilation with ghc 7.8 and 7.10 (thanks to Edward Tjörnhammar,
     see [issue #225]).
 
-[issue #225]: https://github.com/jaor/xmobar/issues/225
-[issue #221]: https://github.com/jaor/xmobar/issues/221
-[issue #216]: https://github.com/jaor/xmobar/issues/216
-[issue #215]: https://github.com/jaor/xmobar/issues/215
+[issue #225]: https://codeberg.org/jao/xmobar/issues/225
+[issue #221]: https://codeberg.org/jao/xmobar/issues/221
+[issue #216]: https://codeberg.org/jao/xmobar/issues/216
+[issue #215]: https://codeberg.org/jao/xmobar/issues/215
 
 ## Version 0.23 (Mar 8, 2015)
 
@@ -474,9 +478,9 @@ _New features_
     discussion in [issue #171] and [issue #201]).
   - New template variable `flags` in `MPD` monitor, by Duncan Burke.
 
-[issue #171]: https://github.com/jaor/xmobar/issues/171
-[issue #201]: https://github.com/jaor/xmobar/issues/201
-[issue #114]: https://github.com/jaor/xmobar/issues/114
+[issue #171]: https://codeberg.org/jao/xmobar/issues/171
+[issue #201]: https://codeberg.org/jao/xmobar/issues/201
+[issue #114]: https://codeberg.org/jao/xmobar/issues/114
 
 _Bug fixes_
 
@@ -484,7 +488,7 @@ _Bug fixes_
   - Better `Weather` parsing of wind direction, by Dino Morelli (see
     [pull #212]).
 
-[pull #212]: https://github.com/jaor/xmobar/pull/212
+[pull #212]: https://codeberg.org/jao/xmobar/pulls/212
 
 ## Version 0.22.1 (Oct 11, 2014)
 
@@ -525,11 +529,11 @@ _Bug fixes_
   - Avoiding zombies on click actions, thanks to Phil Xiaojun Hu
     ([issue #181]).
 
-[issue #181]: https://github.com/jaor/xmobar/issues/181
-[issue #189]: https://github.com/jaor/xmobar/issues/189
-[pull request #192]: https://github.com/jaor/xmobar/pull/192
-[pull request #195]: https://github.com/jaor/xmobar/pull/195
-[pull request #196]: https://github.com/jaor/xmobar/pull/196
+[issue #181]: https://codeberg.org/jao/xmobar/issues/181
+[issue #189]: https://codeberg.org/jao/xmobar/issues/189
+[pull request #192]: https://codeberg.org/jao/xmobar/pulls/192
+[pull request #195]: https://codeberg.org/jao/xmobar/pulls/195
+[pull request #196]: https://codeberg.org/jao/xmobar/pulls/196
 
 ## Version 0.21 (Jul 1, 2014)
 
@@ -550,7 +554,7 @@ _Bug fixes_
     [issue #89]).
   - Fix for very long running `Cpu` monitors, by Robert J Macomber.
 
-[issue #89]: https://github.com/jaor/xmobar/issues/89
+[issue #89]: https://codeberg.org/jao/xmobar/issues/89
 
 ## Version 0.20.1 (March 13, 2014)
 
@@ -560,7 +564,7 @@ _New features_
     configuration option, `pickBroadest`, for choosing the broadest
     (see [issue #158]).
 
-[issue #158]: https://github.com/jaor/xmobar/issues/158
+[issue #158]: https://codeberg.org/jao/xmobar/issues/158
 
 ## Version 0.20 (March 10, 2014)
 
@@ -584,60 +588,60 @@ _Bug fixes_
     see [issue #133]).
   - Compatibility with latest `directory` (1.2.0.2).
 
-[issue #76]: https://github.com/jaor/xmobar/issues/76
-[issue #111]: https://github.com/jaor/xmobar/issues/111
-[issue #133]: https://github.com/jaor/xmobar/issues/133
-[issue #139]: https://github.com/jaor/xmobar/issues/133
+[issue #76]: https://codeberg.org/jao/xmobar/issues/76
+[issue #111]: https://codeberg.org/jao/xmobar/issues/111
+[issue #133]: https://codeberg.org/jao/xmobar/issues/133
+[issue #139]: https://codeberg.org/jao/xmobar/issues/133
 
 ## Version 0.19 (October 27, 2013)
 
 As of this release, the old bug tracker at Google code is deprecated.
-Please use [Github's tracker] for new bugs.
+Please use [codeberg's tracker] for new bugs.
 
 _New features_
 
   - New monitor `BatteryN`, a variant of `BatteryP` that lets you
     specify the name of the monitor in the template.
   - Support for configuration file living in `XDG_CONFIG_HOME` (see
-    [github #99]).
+    [codeberg #99]).
   - `Com` uses safer `runInteractiveProcess` instead of spawning a
     shell (David McLean).  If you're using shell expansion in your
     `Com` (e.g. "~/bin/script") here's a workaround: `Run Com
-    "/bin/bash" ["-c", "~/bin/script"]` (cf. [github #127]).
+    "/bin/bash" ["-c", "~/bin/script"]` (cf. [codeberg #127]).
   - New plugin `UnsafeStdinReader` that allows actions from stdin.
     Now it's possible to have clickable workspaces!
-    (Thiago Negri, see [github #125]).
+    (Thiago Negri, see [codeberg #125]).
   - New monitor configuration option (`-x` or `--nastring`) that allows
     specifying what string to display when a monitor is not available
-    (defaulting to "N/A"). Cf. [github #119].
+    (defaulting to "N/A"). Cf. [codeberg #119].
 
 _Bug fixes_
 
   - Using the width options `-w`, `-m` and `-M` in battery monitors
-    watts display ([github #118]).
-  - Using the `-d` option in `CoreTemp` ([github #115])
+    watts display ([codeberg #118]).
+  - Using the `-d` option in `CoreTemp` ([codeberg #115])
   - Fix for systems not supporting PCRE regular expressions: we use
     now BCEs, so regex-compat should be enough everywhere (see
-    [github #117]).
+    [codeberg #117]).
   - Weather monitor: support for stations without name (Sergei
     Trofimovich, [issue #65]).
 
-[Github's tracker]: https://github.com/jaor/xmobar/issues
-[github #99]: https://github.com/jaor/xmobar/issues/115
-[github #115]: https://github.com/jaor/xmobar/issues/115
-[github #117]: https://github.com/jaor/xmobar/issues/117
-[github #125]: https://github.com/jaor/xmobar/issues/125
+[codeberg's tracker]: https://codeberg.org/jao/xmobar/issues
+[codeberg #99]: https://codeberg.org/jao/xmobar/issues/115
+[codeberg #115]: https://codeberg.org/jao/xmobar/issues/115
+[codeberg #117]: https://codeberg.org/jao/xmobar/issues/117
+[codeberg #125]: https://codeberg.org/jao/xmobar/issues/125
 [issue #65]: http://code.google.com/p/xmobar/issues/detail?id=65
-[github #118]: https://github.com/jaor/xmobar/issues/118
-[github #119]: https://github.com/jaor/xmobar/issues/119
-[github #127]: https://github.com/jaor/xmobar/issues/127
+[codeberg #118]: https://codeberg.org/jao/xmobar/issues/118
+[codeberg #119]: https://codeberg.org/jao/xmobar/issues/119
+[codeberg #127]: https://codeberg.org/jao/xmobar/issues/127
 
 ## Version 0.18 (June 5, 2013)
 
 _New features_
 
   - All extra argument monitors taking a string (e.g. `-O` for
-    `BatteryP`) accept now template variables (see [github #109] and
+    `BatteryP`) accept now template variables (see [codeberg #109] and
     [#110]).  Thanks to Todd Lunter.
 
   - New battery monitor extra argument, `-i`, for the idle status.
@@ -647,8 +651,8 @@ _Bug fixes_
   - Safer standard input parsing, avoiding <action> injections.
 
 
-[github #109]: https://github.com/jaor/xmobar/issues/109
-[#110]: https://github.com/jaor/xmobar/issues/110
+[codeberg #109]: https://codeberg.org/jao/xmobar/issues/109
+[#110]: https://codeberg.org/jao/xmobar/issues/110
 
 ## Version 0.17 (May 5, 2013)
 
@@ -662,19 +666,19 @@ _New features_
   - New `<freeratio>` field for memory monitor (Peter Simons).
   - New `allDesktops` and `overrideRedirect` configuration options,
     providing dock behaviour in tiling WMs (when set to True and False
-    respectively). Cf. discussion at [github #105].
-  - Experimental `-d` (start as a dock) option, may address [github #67]
+    respectively). Cf. discussion at [codeberg #105].
+  - Experimental `-d` (start as a dock) option, may address [codeberg #67]
     in some window managers.
 
 _Bug fixes_
 
-  - Partial (as reports go) fix for [github #77].
+  - Partial (as reports go) fix for [codeberg #77].
   - Safer volume plugin (Dmitry Malikov).
   - Battery percentage capped at 100% (RJ Regenold).
 
-[github #67]: https://github.com/jaor/xmobar/issues/67
-[github #77]: https://github.com/jaor/xmobar/issues/77
-[github #105]: https://github.com/jaor/xmobar/issues/105
+[codeberg #67]: https://codeberg.org/jao/xmobar/issues/67
+[codeberg #77]: https://codeberg.org/jao/xmobar/issues/77
+[codeberg #105]: https://codeberg.org/jao/xmobar/issues/105
 
 
 ## Version 0.16 (Dec 3, 2012)
@@ -703,7 +707,7 @@ _Bug fixes_
 
   - `DiskIO` now can report overall activity in all partitions of a device
     which is not mounted itself (e.g., sda when sda1, sda3, etc. are
-    the mounted partitions).  Thanks to John Soros. See [github #73].
+    the mounted partitions).  Thanks to John Soros. See [codeberg #73].
   - `DiskU`, the disk usage monitor, works again correctly on Linux,
     instead of randomly crashing every now and then, and reporting
     wrong used size.
@@ -712,18 +716,18 @@ _Bug fixes_
     server doesn't know how to get rid of (even when told so!).  We're
     caching them now and X server memory doesn't grow.
   - Compilation errors and warnings with GHC 7.6 removed (thanks to
-    Raghavendra D Prabhu for his reports in [github #71]).
+    Raghavendra D Prabhu for his reports in [codeberg #71]).
 
 _Known problems_
 
 Some users have reported problems with xmobar compiled with GHC 7.6 in
-ArchLinux: see [github #78] and pointers therein.  Please, send
+ArchLinux: see [codeberg #78] and pointers therein.  Please, send
 reports of any problems or successes in that regard so that we can fix
 any remaining issues.  Thanks!
 
-[github #71]: https://github.com/jaor/xmobar/issues/71
-[github #73]: https://github.com/jaor/xmobar/issues/73
-[github #78]: https://github.com/jaor/xmobar/issues/78
+[codeberg #71]: https://codeberg.org/jao/xmobar/issues/71
+[codeberg #73]: https://codeberg.org/jao/xmobar/issues/73
+[codeberg #78]: https://codeberg.org/jao/xmobar/issues/78
 
 ## Version 0.15 (June 4, 2012)
 
@@ -742,7 +746,7 @@ _New features_
     display for float numbers.  Defaults to 0. See [issue 58].
   - New compilation option `--with_threaded`, to use GHC's threaded
     runtime to compile xmobar.  Disabled by default (cf. discussion in
-    [github #36]).
+    [codeberg #36]).
 
 _Bug fixes_
 
@@ -754,15 +758,15 @@ _Bug fixes_
   - DiskIO works also when device path in mtab are symbolic links
     to the real device file.
   - Wireless monitor honours padding settings for ESSID names.
-  - CoreTemp monitor fixed for newer kernels ([github #38]).
+  - CoreTemp monitor fixed for newer kernels ([codeberg #38]).
 
 [issue 56]: http://code.google.com/p/xmobar/issues/detail?id=56
 [issue 58]: http://code.google.com/p/xmobar/issues/detail?id=58
 [issue 64]: http://code.google.com/p/xmobar/issues/detail?id=64
 [issue 67]: http://code.google.com/p/xmobar/issues/detail?id=67
 [issue 69]: http://code.google.com/p/xmobar/issues/detail?id=69
-[github #36]: https://github.com/jaor/xmobar/issues/36
-[github #38]: https://github.com/jaor/xmobar/issues/38
+[codeberg #36]: https://codeberg.org/jao/xmobar/issues/36
+[codeberg #38]: https://codeberg.org/jao/xmobar/issues/38
 
 ## Version 0.14 (Dec 10, 2011)
 
@@ -865,7 +869,7 @@ and Norbert Zeh for their patches.
 
 [website]: http://projects.haskell.org/xmobar/
 [mailing list]: http://projects.haskell.org/cgi-bin/mailman/listinfo/xmobar
-[source code repository]: https://github.com/jaor/xmobar
+[source code repository]: https://codeberg.org/jao/xmobar
 [maintainer]: http://hacks-galore.org/jao/
 
 _New features_

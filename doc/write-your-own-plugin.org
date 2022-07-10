@@ -23,8 +23,8 @@ an example.
 =run= can be used for simpler plugins. If you define only =run= the
 plugin will be run every second. To overwrite this default you just need
 to implement =rate=, which must return the number of tenth of seconds
-between every successive runs. See [[https://github.com/jaor/xmobar/blob/master/examples/xmobar.hs][examples/xmobar.hs]] for an example of
-a plugin that runs just once, and [[https://github.com/jaor/xmobar/blob/master/src/Xmobar/Plugins/Date.hs][src/Xmobar/Plugins/Date.hs]] for one
+between every successive runs. See [[../examples/xmobar.hs][examples/xmobar.hs]] for an example of
+a plugin that runs just once, and [[../src/Xmobar/Plugins/Date.hs][src/Xmobar/Plugins/Date.hs]] for one
 that implements =rate=.
 
 Notice that Date could be implemented as:

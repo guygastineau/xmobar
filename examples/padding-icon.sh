@@ -12,7 +12,7 @@
 # `Run Com "/where/ever/padding-icon.sh" ["stalonetray"] "tray" 10`
 
 # Very heavily based on Jonas Camillus Jeppensen code
-# https://github.com/jaor/xmobar/issues/239#issuecomment-233206552
+# https://codeberg.org/jao/xmobar/issues/239#issuecomment-233206552
 
 # Function to create a transparent Wx1 px XPM icon
 create_xpm_icon () {
