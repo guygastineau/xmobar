@@ -11,9 +11,6 @@ features, like dynamic color management, icons, output templates, and
 extensibility through plugins.  It is also able to write to standard
 output, in a variety of formats.
 
-These are some xmobar [[file:doc/screenshots][screenshots]] using one of the authors'
-configuration:
-
 [[file:doc/screenshots/xmobar-top.png]]
 
 [[file:doc/screenshots/xmobar-bottom.png]]
