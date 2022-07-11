@@ -66,7 +66,7 @@ channel, ~#xmobar~, at [[ircs://irc.libera.chat][Libera]].
     #+end_src
 
     Starting with version 0.35.1, xmobar now requires at least GHC
-    version 8.4.x. to build. See [[https://codeberg.org/jao/xmobar/issues/461][this issue]] for more information.
+    version 8.4.x. to build. See [[https://codeberg.org/xmobar/xmobar/issues/461][this issue]] for more information.
 
     See [[file:doc/compiling.org][compiling]] for a list of optional compilation flags that will
     enable some optional plugins. For instance, to install xmobar with
@@ -168,7 +168,7 @@ channel, ~#xmobar~, at [[ircs://irc.libera.chat][Libera]].
   - If you want to write your own plugins, see [[./doc/write-your-own-plugin.org][Write your own plugin]].
 
   - For elaborated examples of how to use xmobar as a Haskell library
-    to create your monitors, see [[https://codeberg.org/jao/xmobar-config][this repo at jao/xmobar-config]].
+    to create your monitors, see [[https://codeberg.org/xmobar/xmobar-config][this repo at xmobar/xmobar-config]].
 
   - To understand the internal mysteries of xmobar you may try reading
     [[https://wiki.haskell.org/X_window_programming_in_Haskell][this tutorial]] on X Window Programming in Haskell.
@@ -208,7 +208,7 @@ channel, ~#xmobar~, at [[ircs://irc.libera.chat][Libera]].
 
 * License
 
-This software is released under a BSD-style license. See [[https://codeberg.org/jao/xmobar/src/branch/master/license][license]] for more
+This software is released under a BSD-style license. See [[https://codeberg.org/xmobar/xmobar/src/branch/master/license][license]] for more
 details.
 
 Copyright © 2010-2022 Jose Antonio Ortega Ruiz

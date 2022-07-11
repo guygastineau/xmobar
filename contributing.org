@@ -5,12 +5,12 @@ document will help guide you in this endeavour.
 
 In case you want to make any non-trivial change to xmobar, it's always
 best to talk with the community first. Currently the best way to do that
-is [[https://codeberg.org/jao/xmobar/issues/new][to create an issue]] on Codeberg. There, you can talk through the
+is [[https://codeberg.org/xmobar/xmobar/issues/new][to create an issue]] on Codeberg. There, you can talk through the
 problems you are having, as well as the proposed solution.
 
 *** Making the change
 
-    It's best to create a separate branch in your clone of the [[https://codeberg.org/jao/xmobar/][xmobar repo]] and
+    It's best to create a separate branch in your clone of the [[https://codeberg.org/xmobar/xmobar/][xmobar repo]] and
     then push this branch to your fork.
 
     If your pull request undergoes several iterations and =master= has changed

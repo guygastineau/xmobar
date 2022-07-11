@@ -1,6 +1,6 @@
 name:               xmobar
 version:            0.45
-homepage:           https://codeberg.org/jao/xmobar
+homepage:           https://codeberg.org/xmobar/xmobar
 synopsis:           A Minimalistic Text Based Status Bar
 description: 	    Xmobar is a minimalistic text based status bar.
                     .
@@ -12,7 +12,7 @@ license:            BSD3
 license-file:       license
 author:             Andrea Rossato and Jose A. Ortega Ruiz
 maintainer:         Jose A. Ortega Ruiz <jao@gnu.org>
-bug-reports:        https://codeberg.org/jao/xmobar/issues
+bug-reports:        https://codeberg.org/xmobar/xmobar/issues
 cabal-version:      >= 1.10
 build-type:         Simple
 
@@ -25,7 +25,7 @@ extra-source-files: readme.org, changelog.md,
 
 source-repository head
   type:      git
-  location:  git://codeberg.org/jao/xmobar.git
+  location:  git://codeberg.org/xmobar/xmobar.git
   branch:    master
 
 flag with_xft
@@ -215,7 +215,7 @@ library
     if flag(with_threaded)
        -- -threaded is a workaround for 100% CPU busy loop
        -- (http://hackage.haskell.org/trac/ghc/ticket/4934).
-       -- See also comments in https://codeberg.org/jao/xmobar/pulls/36
+       -- See also comments in https://codeberg.org/xmobar/xmobar/pulls/36
        cpp-options: -DTHREADED_RUNTIME
 
     if flag(with_rtsopts)
@@ -345,7 +345,7 @@ executable xmobar
     if flag(with_threaded)
        -- -threaded is a workaround for 100% CPU busy loop
        -- (http://hackage.haskell.org/trac/ghc/ticket/4934).
-       -- See also comments in https://codeberg.org/jao/xmobar/pulls/36
+       -- See also comments in https://codeberg.org/xmobar/xmobar/pulls/36
        ghc-options: -threaded
        cpp-options: -DTHREADED_RUNTIME
 

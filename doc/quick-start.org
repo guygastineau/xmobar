@@ -7,7 +7,7 @@ loot at [[../examples/xmobar.hs][examples/xmobar.hs]] or, for a more complicated
 [[https://gitlab.com/jaor/xmobar-config/][the author's configuration]].
 
 There is also an example of a config using the configuration language
-available [[https://codeberg.org/jao/xmobar/src/branch/master/examples/xmobar.config][here]].
+available [[https://codeberg.org/xmobar/xmobar/src/branch/master/examples/xmobar.config][here]].
 
 * Command Line Options
 
@@ -410,7 +410,7 @@ available [[https://codeberg.org/jao/xmobar/src/branch/master/examples/xmobar.co
 
 *** Dynamically sizing xmobar
 
-    See [[https://codeberg.org/jao/xmobar/issues/239#issuecomment-233206552][this idea]] by Jonas Camillus Jeppensen for a way of adapting
+    See [[https://codeberg.org/xmobar/xmobar/issues/239#issuecomment-233206552][this idea]] by Jonas Camillus Jeppensen for a way of adapting
     dynamically xmobar's size and run it alongside a system tray widget such
     as trayer or stalonetray (although the idea is not limited to trays,
     really). For your convenience, there is a version of Jonas' script in

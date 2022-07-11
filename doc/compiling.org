@@ -6,14 +6,14 @@ code in a variety of ways:
 - From [[http://hackage.haskell.org/package/xmobar/][Hackage]]. Just download the latest release from xmobar's hackage
   page.
 
-- From [[http://codeberg.org/jao/xmobar/][Codeberg]]. There are also tarballs available for every tagged
-  release on [[https://codeberg.org/jao/xmobar/releases][Codeberg's releases page]]
+- From [[http://codeberg.org/xmobar/xmobar/][Codeberg]]. There are also tarballs available for every tagged
+  release on [[https://codeberg.org/xmobar/xmobar/releases][Codeberg's releases page]]
 
 - From the bleeding edge repo. If you prefer to live dangerously, just
   get the latest and greatest (and buggiest, I guess) using git:
 
   #+begin_src shell
-    git clone git://codeberg.org/jao/xmobar
+    git clone git://codeberg.org/xmobar/xmobar
   #+end_src
 
 If you have cabal installed, you can now use it from within xmobar's
