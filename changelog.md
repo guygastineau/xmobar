@@ -1,4 +1,4 @@
-## Version 0.45 (unreleased)
+## Version 0.44.1 (unreleased)
 
 Repository moved to Codeberg.
 
