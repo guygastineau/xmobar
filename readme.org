@@ -1,6 +1,10 @@
 #+title: xmobar, a minimalistic status bar
 
-[[https://img.shields.io/hackage/v/xmobar.svg]]
+#+begin_export html
+<a href="http://hackage.haskell.org/package/xmobar">
+  <img src="https://img.shields.io/hackage/v/xmobar.svg" alt="hackage"/>
+</a>
+#+end_export
 
 Xmobar is a minimalistic status bar. It was originally designed and
 implemented to work with [[http://xmonad.org][xmonad]], but it is actually usable with any
