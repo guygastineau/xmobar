@@ -27,34 +27,30 @@ channel, ~#xmobar~, at [[ircs://irc.libera.chat][Libera]].
     manager!  Most distributions compile xmobar with the =all_extensions=
     flag, so you don't have to.
 
-***** Arch Linux
+    - Arch Linux
+      #+begin_src shell
+        pacman -S xmobar
+      #+end_src
 
-  #+begin_src shell
-    pacman -S xmobar
-  #+end_src
+    - Debian/Ubuntu based
+      #+begin_src shell
+        apt install xmobar
+      #+end_src
 
-***** Debian/Ubuntu based
+    - OpenSUSE
+      #+begin_src shell
+        zypper install xmobar
+      #+end_src
 
-  #+begin_src shell
-    apt install xmobar
-  #+end_src
+    - Void Linux
+      #+begin_src shell
+        xbps-install xmobar
+      #+end_src
 
-***** OpenSUSE
-
-  #+begin_src shell
-    zypper install xmobar
-  #+end_src
-
-***** Void Linux
-
-  #+begin_src shell
-    xbps-install xmobar
-  #+end_src
-
-***** Gentoo
-  #+begin_src shell
-    emerge --ask xmobar
-  #+end_src
+    - Gentoo
+      #+begin_src shell
+        emerge --ask xmobar
+      #+end_src
 
 *** Using cabal-install
 
@@ -168,7 +164,7 @@ channel, ~#xmobar~, at [[ircs://irc.libera.chat][Libera]].
   - If you want to write your own plugins, see [[./doc/write-your-own-plugin.org][Write your own plugin]].
 
   - For elaborated examples of how to use xmobar as a Haskell library
-    to create your monitors, see [[https://codeberg.org/xmobar/xmobar-config][this repo at xmobar/xmobar-config]].
+    to create your monitors, see [[https://codeberg.org/jao/xmobar-config][this repo at jao/xmobar-config]].
 
   - To understand the internal mysteries of xmobar you may try reading
     [[https://wiki.haskell.org/X_window_programming_in_Haskell][this tutorial]] on X Window Programming in Haskell.
