@@ -244,6 +244,9 @@
       #+end_src
 
 ***** =BatteryP Dirs Args RefreshRate=
+      :PROPERTIES:
+      :CUSTOM_ID: batteryp-dirs-args-refreshrate
+      :END:
 
       - Aliases to =battery=
 
@@ -1180,6 +1183,9 @@
         =with_iwlib= flag during compilation.
 
 *** Weather Monitors
+    :PROPERTIES:
+    :CUSTOM_ID: weather-monitors
+    :END:
 ***** =Weather StationID Args RefreshRate=
 
       - Aliases to the Station ID: so =Weather "LIPB" []= can be used in

@@ -27,6 +27,9 @@ Check [[./changelog.md][the change log]] for our release history.  We also have 
 channel, ~#xmobar~, at [[ircs://irc.libera.chat][Libera]].
 
 * Installation
+  :PROPERTIES:
+  :CUSTOM_ID: installation
+  :END:
 *** From your system's package manager
 
     Xmobar is probably available from your distributions package

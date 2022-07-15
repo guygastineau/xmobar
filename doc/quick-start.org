@@ -55,6 +55,9 @@ available [[https://codeberg.org/xmobar/xmobar/src/branch/master/examples/xmobar
     Mail bug reports and suggestions to <mail@jao.io>
   #+end_src
 * Configuration Options
+  :PROPERTIES:
+  :CUSTOM_ID: configuration-options
+  :END:
 *** Global options
     Here are all the global configuration options that you can set within
     the =Config= block in your configuration.
