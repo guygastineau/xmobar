@@ -1,6 +1,6 @@
-## Version 0.44.1 (unreleased)
+## Version 0.44.1 (July, 20022)
 
-Repository moved to Codeberg.
+Repository moved to Codeberg.  No code changes.
 
 ## Version 0.44 (July, 2022)
 
