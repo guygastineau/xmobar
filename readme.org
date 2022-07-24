@@ -108,15 +108,16 @@ channel, ~#xmobar~, at [[ircs://irc.libera.chat][Libera]].
 
    All the available command line switches and configuration parameters are
    described in [[file:quick-start.org][the quick start guide]] and [[file:plugins.org][the plugins documentation]].
+
 ** Writing your own xmobar in Haskell
 
-   One can use ~xmobar~ as a regular program, via its configuration file,
-   without having to write any code. It also is possible to install xmobar as
-   a library and use it to write your own xmobar using Haskell instead of
-   using a configuration file.  (This is very similar to how [[http://xmonad.org][xmonad]] works.)
-   That gives you the ability of using Haskell and its libraries to extend
-   xmobar to your heart's content. If you are a programmer, take a look at
-   [[file:doc/using-haskell.org][here]] to learn more.
+   As shown above, one can use ~xmobar~ as a regular program, via its
+   configuration file, without having to write any code. It also is possible
+   to install xmobar as a library and use it to write your own xmobar using
+   Haskell instead of using a configuration file.  (This is very similar to
+   how [[http://xmonad.org][xmonad]] works.)  That gives you the ability of using Haskell and its
+   libraries to extend xmobar to your heart's content. If you are a
+   programmer, take a look [[file:doc/using-haskell.org][here]] to learn more.
 
 ** Running xmobar in text mode
 
