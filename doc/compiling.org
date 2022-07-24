@@ -38,6 +38,9 @@ them to =stack= directly:
 #+end_src
 
 ** Optional features
+   :PROPERTIES:
+   :CUSTOM_ID: optional-features
+   :END:
 
    You can configure xmobar to include some optional plugins and
    features, which are not compiled by default. To that end, you need
