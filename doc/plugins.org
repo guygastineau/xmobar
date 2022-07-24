@@ -1,6 +1,6 @@
 #+title: Plugins and monitors
 
-* System Monitor Plugins
+* System monitor plugins
 
   This is the description of the system monitor plugins available in
   xmobar. Some of them are only installed when an optional build
@@ -60,7 +60,7 @@
    Will display =bright_0.xpm= to =bright_8.xpm= depending on current
    brightness value.
 
-** Default Monitor Arguments
+** Default monitor arguments
 
    These are the options available for all monitors:
 
@@ -234,7 +234,7 @@
        Glasgow Airport: 16.0C
      #+end_src
 
-** Battery Monitors
+** Battery monitors
 *** =Battery Args RefreshRate=
 
     Same as
@@ -336,7 +336,7 @@
     Works like =BatteryP=, but lets you specify an alias for the
     monitor other than "battery". Useful in case you one separate
     monitors for more than one battery.
-** Cpu and Memory Monitors
+** Cpu and Memory monitors
 *** =Cpu Args RefreshRate=
 
     - Aliases to =cpu=
@@ -550,7 +550,7 @@
       =total=, =used=, =free=, =usedratio=
     - Default template: =Swap: <usedratio>%=
 
-** Date Monitors
+** Date monitors
 *** =Date Format Alias RefreshRate=
 
     - Format is a time format string, as accepted by the standard ISO C
@@ -587,7 +587,7 @@
       #+begin_src haskell
         Run DateZone "%a %H:%M:%S" "de_DE.UTF-8" "Europe/Vienna" "viennaTime" 10
       #+end_src
-** Disk Monitors
+** Disk monitors
 *** =DiskU Disks Args RefreshRate=
 
     - Aliases to =disku=
@@ -653,7 +653,7 @@
         DiskIO [("/", "<read> <write>"), ("sdb1", "<total>")] [] 10
       #+end_src
 
-** Keyboard Monitors
+** Keyboard and screen monitors
 *** =Kbd Opts=
 
     - Registers to XKB/X11-Events and output the currently active keyboard
@@ -672,6 +672,29 @@
         Run Kbd [("us(dvorak)", "DV"), ("us", "US")]
       #+end_src
 
+*** =Brightness Args RefreshRate=
+
+    - Aliases to =bright=
+
+    - Args: default monitor arguments, plus the following specif ones:
+
+      - =-D=: directory in =/sys/class/backlight/= with files in it
+        (default: "acpi_video0")
+      - =-C=: file with the current brightness (default: actual_brightness)
+      - =-M=: file with the maximum brightness (default: max_brightness)
+      - =--brightness-icon-pattern=: dynamic string for current brightness
+        in =ipat=.
+
+    - Variables that can be used with the =-t/--template= argument:
+      =vbar=, =percent=, =bar=, =ipat=
+
+    - Default template: =<percent>=
+
+    - Example:
+
+      #+begin_src haskell
+        Run Brightness ["-t", "<bar>"] 60
+      #+end_src
 *** =Locks=
 
     - Displays the status of Caps Lock, Num Lock and Scroll Lock.
@@ -684,7 +707,7 @@
         Run Locks
       #+end_src
 
-** Load and Process Monitors
+** Load and Process monitors
 *** =Load Args RefreshRate=
 
     - Aliases to =load=
@@ -741,7 +764,7 @@
       (=bothn= displays both, and is useful to specify an overall maximum
       and/or minimum width, using the =-m/-M= arguments.
 
-** Thermal Monitors
+** Thermal monitors
 *** =ThermalZone Number Args RefreshRate=
 
     - Aliases to "thermaln": so =ThermalZone 0 []= can be used in template
@@ -790,7 +813,7 @@
         Run Thermal "THRM" ["-t","iwl4965-temp: <temp>C"] 50
       #+end_src
 
-** Volume Monitors
+** Volume monitors
 *** =Volume Mixer Element Args RefreshRate=
 
     - Aliases to the mixer name and element name separated by a
@@ -884,7 +907,7 @@
       - =stdbuf= (from coreutils) must be (and most probably already is) in
         your =PATH=.
 
-** Mail Monitors
+** Mail monitors
 *** =Mail Args Alias=
 
     - Args: list of maildirs in form =[("name1","path1"),...]=. Paths may
@@ -1027,7 +1050,7 @@
             600                   -- update every 60 seconds
         #+end_src
 
-** Music Monitors
+** Music monitors
 *** =MPD Args RefreshRate=
 
     - This monitor will only be compiled if you ask for it using the
@@ -1115,7 +1138,7 @@
         Run Mpris2 "spotify" ["-t", "<artist> - [<composer>] <title>"] 10
       #+end_src
 
-** Network Monitors
+** Network monitors
 *** =Network Interface Args RefreshRate=
 
     - Aliases to the interface name: so =Network "eth0" []= can be used as
@@ -1182,7 +1205,7 @@
     - To activate this plugin you must pass the =with_nl80211= or the
       =with_iwlib= flag during compilation.
 
-** Weather Monitors
+** Weather monitors
    :PROPERTIES:
    :CUSTOM_ID: weather-monitors
    :END:
@@ -1249,31 +1272,32 @@
       As mentioned, the replacement string can also be an icon specification,
       such as =("clear", "<icon=weather-clear.xbm/>")=.
 
-** Other Monitors
-*** =Brightness Args RefreshRate=
+*** =UVMeter=
 
-    - Aliases to =bright=
+    - Aliases to "uv" + station id. For example: =%uv Brisbane%= or
+      =%uv   Alice Springs%=
 
-    - Args: default monitor arguments, plus the following specif ones:
+    - Args: default monitor arguments, plus:
 
-      - =-D=: directory in =/sys/class/backlight/= with files in it
-        (default: "acpi_video0")
-      - =-C=: file with the current brightness (default: actual_brightness)
-      - =-M=: file with the maximum brightness (default: max_brightness)
-      - =--brightness-icon-pattern=: dynamic string for current brightness
-        in =ipat=.
+      - =--useManager= /bool/ : Whether to use one single manager per
+        monitor for managing network connections or create a new one every
+        time a connection is made.
 
-    - Variables that can be used with the =-t/--template= argument:
-      =vbar=, =percent=, =bar=, =ipat=
+        - Short option: =-m=
+        - Default: True
 
-    - Default template: =<percent>=
+    - /Reminder:/ Keep the refresh rate high, to avoid making unnecessary
+      requests every time the plug-in is run.
+
+    - Station IDs can be found here:
+      http://www.arpansa.gov.au/uvindex/realtime/xml/uvvalues.xml
 
     - Example:
 
       #+begin_src haskell
-        Run Brightness ["-t", "<bar>"] 60
+        Run UVMeter "Brisbane" ["-H", "3", "-L", "3", "--low", "green", "--high", "red"] 900
       #+end_src
-
+** Other monitors
 *** =CatInt n filename=
 
     - Reads and displays an integer from the file whose path is =filename=
@@ -1303,33 +1327,227 @@
       the display of those numeric fields.
     - Default template: =Up: <days>d <hours>h <minutes>m=
 
-*** =UVMeter=
+* Interfacing with window managers
+** Property-based logging
+*** =XMonadLog=
 
-    - Aliases to "uv" + station id. For example: =%uv Brisbane%= or
-      =%uv   Alice Springs%=
+    - Aliases to XMonadLog
 
-    - Args: default monitor arguments, plus:
-
-      - =--useManager= /bool/ : Whether to use one single manager per
-        monitor for managing network connections or create a new one every
-        time a connection is made.
-
-        - Short option: =-m=
-        - Default: True
-
-    - /Reminder:/ Keep the refresh rate high, to avoid making unnecessary
-      requests every time the plug-in is run.
-
-    - Station IDs can be found here:
-      http://www.arpansa.gov.au/uvindex/realtime/xml/uvvalues.xml
-
-    - Example:
+    - Displays information from xmonad's =_XMONAD_LOG=. You can use
+      this by using functions from the [[https://hackage.haskell.org/package/xmonad-contrib-0.16/docs/XMonad-Hooks-DynamicLog.html][XMonad.Hooks.DynamicLog]]
+      module. By using the =xmonadPropLog= function in your logHook,
+      you can write the the above property. The following shows a
+      minimal xmonad configuration that spawns xmobar and then
+      writes to the =_XMONAD_LOG= property.
 
       #+begin_src haskell
-        Run UVMeter "Brisbane" ["-H", "3", "-L", "3", "--low", "green", "--high", "red"] 900
+        main = do
+          spawn "xmobar"
+          xmonad $ def
+            { logHook = dynamicLogString defaultPP >>= xmonadPropLog
+            }
       #+end_src
 
-* Executing External Commands
+      This plugin can be used as a sometimes more convenient
+      alternative to =StdinReader=. For instance, it allows you to
+      (re)start xmobar outside xmonad.
+
+*** =UnsafeXMonadLog=
+
+    - Aliases to UnsafeXMonadLog
+    - Displays any text received by xmobar on the =_XMONAD_LOG= atom.
+    - Will not do anything to the text received. This means you can pass
+      xmobar dynamic actions. Be careful to escape (using =<raw=…>=) or
+      remove tags from dynamic text that you pipe through to xmobar in this
+      way.
+
+    - Sample usage: Send the list of your workspaces, enclosed by actions
+      tags, to xmobar.  This enables you to switch to a workspace when you
+      click on it in xmobar!
+
+      #+begin_src shell
+        <action=`xdotool key alt+1`>ws1</action> <action=`xdotool key alt+1`>ws2</action>
+      #+end_src
+
+    - If you use xmonad, It is advised that you still use =xmobarStrip= for
+      the =ppTitle= in your logHook:
+
+      #+begin_src haskell
+        myPP = defaultPP { ppTitle = xmobarStrip }
+        main = xmonad $ def
+          { logHook = dynamicLogString myPP >>= xmonadPropLog
+          }
+      #+end_src
+
+*** =XPropertyLog PropName=
+
+    - Aliases to =PropName=
+    - Reads the X property named by =PropName= (a string) and displays its
+      value. The [[../examples/xmonadpropwrite.hs][examples/xmonadpropwrite.hs script]] in xmobar's distribution
+      can be used to set the given property from the output of any other
+      program or script.
+
+*** =UnsafeXPropertyLog PropName=
+
+    - Aliases to =PropName=
+    - Same as =XPropertyLog= but the input is not filtered to avoid
+      injection of actions (cf. =UnsafeXMonadLog=). The program writing the
+      value of the read property is responsible of performing any needed
+      cleanups.
+
+*** =NamedXPropertyLog PropName Alias=
+
+    - Aliases to =Alias=
+    - Same as =XPropertyLog= but a custom alias can be specified.
+
+*** =UnsafeNamedXPropertyLog PropName Alias=
+
+    - Aliases to =Alias=
+    - Same as =UnsafeXPropertyLog=, but a custom alias can be specified.
+
+** Logging via Stdin
+*** =StdinReader=
+
+    - Aliases to StdinReader
+    - Displays any text received by xmobar on its standard input.
+    - Strips actions from the text received. This means you can't pass
+      dynamic actions via stdin. This is safer than =UnsafeStdinReader=
+      because there is no need to escape the content before passing it to
+      xmobar's standard input.
+
+*** =UnsafeStdinReader=
+
+    - Aliases to UnsafeStdinReader
+    - Displays any text received by xmobar on its standard input.
+    - Similar to [[=UnsafeXMonadLog=][UnsafeXMonadLog]], in the sense that it does not strip any
+      actions from the received text, only using =stdin= and not a property
+      atom of the root window. Please be equally carefully when using this
+      as when using =UnsafeXMonadLog=!
+
+** Pipe-based logging
+*** =PipeReader "default text:/path/to/pipe" Alias=
+
+    - Reads its displayed output from the given pipe.
+    - Prefix an optional default text separated by a colon
+    - Expands environment variables in the first argument of syntax =${VAR}=
+      or =$VAR=
+
+*** =MarqueePipeReader "default text:/path/to/pipe" (length, rate, sep) Alias=
+
+    - Generally equivalent to PipeReader
+
+    - Text is displayed as marquee with the specified length, rate in 10th
+      seconds and separator when it wraps around
+
+      #+begin_src haskell
+        Run MarqueePipeReader "/tmp/testpipe" (10, 7, "+") "mpipe"
+      #+end_src
+
+    - Expands environment variables in the first argument
+
+*** =BufferedPipeReader Alias [(Timeout, Bool, "/path/to/pipe1"), ..]=
+
+    - Display data from multiple pipes.
+
+    - Timeout (in tenth of seconds) is the value after which the
+      previous content is restored i.e. if there was already
+      something from a previous pipe it will be put on display
+      again, overwriting the current status.
+
+    - A pipe with Timeout of 0 will be displayed permanently, just
+      like =PipeReader=
+
+    - The boolean option indicates whether new data for this pipe
+      should make xmobar appear (unhide, reveal). In this case, the
+      Timeout additionally specifies when the window should be
+      hidden again. The output is restored in any case.
+
+    - Use it for OSD-like status bars e.g. for setting the volume or
+      brightness:
+
+      #+begin_src haskell
+        Run BufferedPipeReader "bpr"
+            [ (  0, False, "/tmp/xmobar_window"  )
+            , ( 15,  True, "/tmp/xmobar_status"  )
+            ]
+      #+end_src
+
+      Have your window manager send window titles to
+      =/tmp/xmobar_window=.  They will always be shown and not reveal
+      your xmobar. Sending some status information to
+      =/tmp/xmobar_status= will reveal xmonad for 1.5 seconds and
+      temporarily overwrite the window titles.
+
+    - Take a look at [[../examples/status.sh][examples/status.sh]]
+
+    - Expands environment variables for the pipe path
+
+** Handle-based logging
+*** =HandleReader Handle Alias=
+
+    - Display data from a Haskell =Handle=
+
+    - This plugin is only useful if you are running xmobar from another
+      Haskell program like XMonad.
+
+    - You can use =System.Process.createPipe= to create a pair of =read= &
+      =write= Handles. Pass the =read= Handle to HandleReader and write your
+      output to the =write= Handle:
+
+      #+begin_src haskell
+        (readHandle, writeHandle) <- createPipe
+        xmobarProcess <- forkProcess $ xmobar myConfig
+                { commands =
+                    Run (HandleReader readHandle "handle") : commands myConfig
+                }
+        hPutStr writeHandle "Hello World"
+      #+end_src
+
+
+** Software Transactional Memory
+
+    When invoking xmobar from other Haskell code it can be easier and more
+    performant to use shared memory.  The following plugins leverage
+    =Control.Concurrent.STM= to realize these gains for xmobar.
+
+*** =QueueReader (TQueue a) (a -> String) String=
+
+    - Display data from a Haskell =TQueue a=.
+
+    - This plugin is only useful if you are running xmobar from another
+      haskell program like xmonad.
+
+    - You should make an =IO= safe =TQueue a= with
+      =Control.Concurrent.STM.newTQueueIO=.  Write to it from the user
+      code with =writeTQueue=, and read with =readTQueue=.  A common use
+      is to overwite =ppOutput= from =XMonad.Hooks.DynamicLog= as shown
+      below.
+
+      #+begin_src haskell
+        main :: IO ()
+        main = do
+          initThreads
+          q <- STM.newTQueueIO @String
+          bar <- forkOS $ xmobar myConf
+            { commands = Run (QueueReader q id "XMonadLog") : commands myConf }
+          xmonad $ def { logHook = logWorkspacesToQueue q }
+
+        logWorkspacesToQueue :: STM.TQueue String -> X ()
+        logWorkspacesToQueue q =
+          dynamicLogWithPP def { ppOutput = STM.atomically . STM.writeTQueue q }
+      #+end_src
+
+      Note that xmonad uses blocking Xlib calls in its event loop and isn't
+      normally compiled with
+      [[https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/using-concurrent.html][the threaded RTS]]
+      so an xmobar thread running inside xmonad will suffer from delayed
+      updates. It is thus necessary to enable =-threaded= when compiling
+      xmonad configuration (=xmonad.hs=), e.g. by using a custom
+      =~/.xmonad/build= script.
+
+
+
+* Executing external commands
 
   In order to execute an external command you can either write the
   command name in the template, in this case it will be executed
