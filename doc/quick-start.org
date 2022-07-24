@@ -3,7 +3,7 @@
 Xmobar can either be configured using the configuration language, or [[file:using-haskell.org][used as a
 Haskell library]] (similar to xmonad) and compiled with your specific
 configuration. For an example of a configuration file using the plain
-configuration language, see [[file:~/usr/jao/xmobar/xmobar/examples/xmobar.config][examples/xmobar.config]], and you can have a look at
+configuration language, see [[../examples/xmobar.config][examples/xmobar.config]], and you can have a look at
 [[../examples/xmobar.hs][examples/xmobar.hs]] for an example of how to write your own xmobar using
 Haskell.
 
@@ -474,7 +474,7 @@ Haskell.
    really). For your convenience, there is a version of Jonas' script in
    [[../examples/padding-icon.sh][examples/padding-icon.sh]].
 
-** Signal Handling
+** Signal handling
 
    xmobar reacts to ~SIGUSR1~ and ~SIGUSR2~:
 
