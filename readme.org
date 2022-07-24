@@ -89,7 +89,7 @@ channel, ~#xmobar~, at [[ircs://irc.libera.chat][Libera]].
     See [[file:doc/compiling.org][compiling]].
 
 * Running xmobar
-
+*** Running xmobar with a configuration file
   You can run xmobar with:
 
   #+begin_src shell
@@ -105,6 +105,54 @@ channel, ~#xmobar~, at [[ircs://irc.libera.chat][Libera]].
   if you have the default configuration file saved as
   =$XDG_CONFIG_HOME/xmobar/xmobarrc= (defaulting to
   =~/.config/xmobar/xmobarrc=), or =~/.xmobarrc=.
+
+*** Writing your own xmobar in Haskell
+    :PROPERTIES:
+    :CUSTOM_ID: xmobar-in-haskell
+    :END:
+
+    It is possible to install xmobar as a library and use it to write your own
+    xmobar using Haskell instead of using a configuration file.  (This is very
+    similar to how [[http://xmonad.org][xmonad]] works.)
+
+    Make sure that ~ghc~ will be able to locate the xmobar library, e.g. with
+
+    #+begin_src shell
+      cabal install --lib xmobar
+    #+end_src
+
+    and then write your Haskell configuration and main function using the
+    functions and types exported in the library, which closely resemble those
+    used in configuration files.  Here's a small example:
+
+    #+begin_src haskell
+      import Xmobar
+
+      config :: Config
+      config =
+        defaultConfig
+          { font = "xft:Terminus-8",
+            allDesktops = True,
+            alpha = 200,
+            commands =
+              [ Run XMonadLog,
+                Run $ Memory ["t", "Mem: <usedratio>%"] 10,
+                Run $ Kbd [],
+                Run $ Date "%a %_d %b %Y <fc=#ee9a00>%H:%M:%S</fc>" "date" 10
+              ],
+            template = "%XMonadLog% }{ %kbd% | %date% | %memory%",
+            alignSep = "}{"
+          }
+
+      main :: IO ()
+      main = xmobar config
+    #+end_src
+
+    You can then for instance run =ghc --make xmobar.hs= to create a new xmobar
+    executable running exactly the monitors defined above.  Or put your
+    =xmobar.hs= program in =~/.config/xmobar/xmobar.hs= and, when running the
+    system-wide xmobar, it will notice that you have your own implementation
+    and (re)compile and run it as needed.  See also this [[./examples/xmobar.hs][extended example]].
 
 *** Running xmobar in text mode
 

@@ -74,4 +74,4 @@ config = defaultConfig {
 }
 
 main :: IO ()
-main = xmobar config
+main = configFromArgs config >>= xmobar
