@@ -110,7 +110,7 @@
   =run*= functions in [[../src/Xmobar/Plugins/Monitors/Common/Run.hs][Xmobar.Plugins.Monitors.Run]] in order to define
   =start=. The =Exec= instance should then live in [[../src/Xmobar/Plugins/Monitors.hs][Xmobar.Plugins.Monitors]].
 
-* Using a Plugin
+* Using a plugin
 
   To use your new plugin, you just need to use a pure Haskell configuration
   for xmobar (as explained [[#xmobar-in-haskell][above]]) and load your definitions in your =xmobar.hs=
