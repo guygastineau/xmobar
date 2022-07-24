@@ -121,56 +121,13 @@ channel, ~#xmobar~, at [[ircs://irc.libera.chat][Libera]].
 
 ** Running xmobar in text mode
 
-   By default, xmobar will run as an X11 application, in a docked
-   window, but it is possible to redirect xmobar's to the standard
-   output, optionally with color escape sequences.  In this mode,
-   xmobar can be run inside a terminal o console, or its output piped
-   to other applications, and there is no need for an X11 display
-   (so, for instance, you could pipe xmobar's output to a Wayland
-   application, such as swaybar.)
-
-   To run xmobar in text mode, either pass the =-T= flag to its
-   invocation:
-
-   #+begin_src shell
-     xmobar -T /path/to/config &
-   #+end_src
-
-   or set the parameter =textOutput= to True in its configuration.  You
-   can also specify the format of color escapes, for instance,
-   omitting them altogether with ~Plain~:
-
-   #+begin_src shell
-     xmobar -TPlain /path/to/config &
-   #+end_src
-
-   Other options are ~Ansi~, ~Pango~, and ~Swaybar~.
-
-** Using xmobar in Wayland with swaybar or waybar
-
-   In text mode, xmobar can be told to ouput its information using
-   pango markup for colors and fonts, and it that way you can use it
-   with swaybar or waybar, if you don't have actions or boxes in your
-   template.  Here's a minimal ~bar~ configuration for sway's
-   configuration file:
-
-   #+begin_src conf
-     bar {
-     status_command xmobar -TPango
-     pango_markup enabled
-     }
-   #+end_src
-
-   In case you want to use boxes around text or click actions in your
-   template, you can use instead the format ~Swaybar~, which supports
-   both.  This output format follows the JSON /swaybar-protocol/
-   defined by swaybar.  Configure it simply with:
-
-   #+begin_src conf
-     bar {
-     status_command xmobar -TSwaybar
-     }
-   #+end_src
+   By default, xmobar will run as an X11 application, in a docked window, but
+   it is possible to redirect xmobar's output to the standard output,
+   optionally with color escape sequences.  In this mode, xmobar can be run
+   inside a terminal o console, or its output piped to other applications, and
+   there is no need for an X11 display.  See [[file:doc/quick-start.org#text-mode][Running xmobar in text mode]] for
+   details.  Using this mode, you could [[file:doc/quick-start.org#wayland][pipe xmobar's output to, say, swaybar]],
+   and use it in wayland.
 
 * Configuration and further documentation
 
@@ -180,7 +137,7 @@ channel, ~#xmobar~, at [[ircs://irc.libera.chat][Libera]].
   - If you want to get a detailed overview of all available plugins and
     monitors, visit the [[./doc/plugins.org][plugins index]].
 
-  - For elaborated examples of how to use xmobar as a Haskell library see the
+  - For more information on how to use xmobar as a Haskell library see the
     [[file:doc/using-haskell.org][using Haskell docs]].
 
   - If you want to know how to contribute to the xmobar project, check out
