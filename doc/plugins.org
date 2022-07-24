@@ -35,9 +35,8 @@
       100
   #+end_src
 
-  See also [[./window-managers.org][Interfacing with window managers]] for a collection of
-  plugins that let you interact and control xmobar from window
-  managers.
+  See also [[#interfacing-with-window-managers][Interfacing with window managers]] below for a collection of plugins
+  that let you interact and control xmobar from window managers.
 
 ** Icon Patterns
 
@@ -1328,6 +1327,9 @@
     - Default template: =Up: <days>d <hours>h <minutes>m=
 
 * Interfacing with window managers
+  :PROPERTIES:
+  :CUSTOM_ID: interfacing-with-window-managers
+  :END:
 ** Property-based logging
 *** =XMonadLog=
 

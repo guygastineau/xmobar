@@ -180,14 +180,11 @@ channel, ~#xmobar~, at [[ircs://irc.libera.chat][Libera]].
   - If you want to get a detailed overview of all available plugins and
     monitors, visit the [[./doc/plugins.org][plugins index]].
 
-  - [[./doc/window-managers.org][Interfacing with window managers]] describes plugins and extensions
-    for interacting with xmobar from your window manager.
+  - For elaborated examples of how to use xmobar as a Haskell library see the
+    [[file:doc/using-haskell.org][using Haskell docs]].
 
   - If you want to know how to contribute to the xmobar project, check out
     [[contributing.org][contributing]].
-
-  - For elaborated examples of how to use xmobar as a Haskell library see the
-    [[file:doc/using-haskell.org][using Haskell docs]].
 
 * Authors and credits
 
