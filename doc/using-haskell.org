@@ -123,3 +123,8 @@
   code will be compiled as needed, and the new executable spawned for you.
 
   That's it!
+
+* Further links
+
+  For an elaborated, experimental and underdocumented example of writing your
+  own repos and status bars using xmobar, see [[https://codeberg.org/jao/xmobar-config][this repo at jao/xmobar-config]].

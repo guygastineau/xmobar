@@ -171,7 +171,7 @@ channel, ~#xmobar~, at [[ircs://irc.libera.chat][Libera]].
      }
    #+end_src
 
-* Configuration and further Links
+* Configuration and further documentation
 
   - If you want to jump straight into running xmobar, head over to the
     [[./doc/quick-start.org][quick start guide]].
@@ -185,13 +185,8 @@ channel, ~#xmobar~, at [[ircs://irc.libera.chat][Libera]].
   - If you want to know how to contribute to the xmobar project, check out
     [[contributing.org][contributing]].
 
-  - If you want to write your own plugins, see [[./doc/using-haskell.org#writing-a-plugin][writing a plugin]].
-
-  - For elaborated examples of how to use xmobar as a Haskell library
-    to create your monitors, see [[https://codeberg.org/jao/xmobar-config][this repo at jao/xmobar-config]].
-
-  - To understand the internal mysteries of xmobar you may try reading
-    [[https://wiki.haskell.org/X_window_programming_in_Haskell][this tutorial]] on X Window Programming in Haskell.
+  - For elaborated examples of how to use xmobar as a Haskell library see the
+    [[file:doc/using-haskell.org][using Haskell docs]].
 
 * Authors and credits
 
