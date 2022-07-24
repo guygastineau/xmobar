@@ -33,179 +33,143 @@ channel, ~#xmobar~, at [[ircs://irc.libera.chat][Libera]].
   :PROPERTIES:
   :CUSTOM_ID: installation
   :END:
-*** From your system's package manager
+** From your system's package manager
 
-    Xmobar is probably available from your distributions package
-    manager!  Most distributions compile xmobar with the =all_extensions=
-    flag, so you don't have to.
+   Xmobar is probably available from your distributions package
+   manager!  Most distributions compile xmobar with the =all_extensions=
+   flag, so you don't have to.
 
-    - Arch Linux
-      #+begin_src shell
-        pacman -S xmobar
-      #+end_src
+   - Arch Linux
+     #+begin_src shell
+       pacman -S xmobar
+     #+end_src
 
-    - Debian/Ubuntu based
-      #+begin_src shell
-        apt install xmobar
-      #+end_src
+   - Debian/Ubuntu based
+     #+begin_src shell
+       apt install xmobar
+     #+end_src
 
-    - OpenSUSE
-      #+begin_src shell
-        zypper install xmobar
-      #+end_src
+   - OpenSUSE
+     #+begin_src shell
+       zypper install xmobar
+     #+end_src
 
-    - Void Linux
-      #+begin_src shell
-        xbps-install xmobar
-      #+end_src
+   - Void Linux
+     #+begin_src shell
+       xbps-install xmobar
+     #+end_src
 
-    - Gentoo
-      #+begin_src shell
-        emerge --ask xmobar
-      #+end_src
+   - Gentoo
+     #+begin_src shell
+       emerge --ask xmobar
+     #+end_src
 
-*** Using cabal-install
+** Using cabal-install
 
-    Xmobar is available from [[http://hackage.haskell.org/package/xmobar/][Hackage]], and you can install it using
-    =cabal-install=:
+   Xmobar is available from [[http://hackage.haskell.org/package/xmobar/][Hackage]], and you can install it using
+   =cabal-install=:
 
-    #+begin_src shell
-      cabal install xmobar
-    #+end_src
+   #+begin_src shell
+     cabal install xmobar
+   #+end_src
 
-    Starting with version 0.35.1, xmobar now requires at least GHC
-    version 8.4.x. to build. See [[https://codeberg.org/xmobar/xmobar/issues/461][this issue]] for more information.
+   Starting with version 0.35.1, xmobar now requires at least GHC
+   version 8.4.x. to build. See [[https://codeberg.org/xmobar/xmobar/issues/461][this issue]] for more information.
 
-    See [[file:doc/compiling.org][compiling]] for a list of optional compilation flags that will
-    enable some optional plugins. For instance, to install xmobar with
-    all the bells and whistles (this is probably what you want), use:
+   See [[file:doc/compiling.org][compiling]] for a list of optional compilation flags that will
+   enable some optional plugins. For instance, to install xmobar with
+   all the bells and whistles (this is probably what you want), use:
 
-    #+begin_src shell
-      cabal install xmobar --flags="all_extensions"
-    #+end_src
+   #+begin_src shell
+     cabal install xmobar --flags="all_extensions"
+   #+end_src
 
-*** From source
+** From source
 
-    See [[file:doc/compiling.org][compiling]].
+   See [[file:doc/compiling.org][compiling]].
 
 * Running xmobar
-*** Running xmobar with a configuration file
-  You can run xmobar with:
+** Running xmobar with a configuration file
+   You can run xmobar with:
 
-  #+begin_src shell
-    xmobar /path/to/config &
-  #+end_src
+   #+begin_src shell
+     xmobar /path/to/config &
+   #+end_src
 
-  or
+   or
 
-  #+begin_src shell
-    xmobar &
-  #+end_src
+   #+begin_src shell
+     xmobar &
+   #+end_src
 
-  if you have the default configuration file saved as
-  =$XDG_CONFIG_HOME/xmobar/xmobarrc= (defaulting to
-  =~/.config/xmobar/xmobarrc=), or =~/.xmobarrc=.
+   if you have the default configuration file saved as
+   =$XDG_CONFIG_HOME/xmobar/xmobarrc= (defaulting to =~/.config/xmobar/xmobarrc=),
+   or =~/.xmobarrc=.
 
-*** Writing your own xmobar in Haskell
-    :PROPERTIES:
-    :CUSTOM_ID: xmobar-in-haskell
-    :END:
+   All the available command line switches and configuration parameters are
+   described in [[file:quick-start.org][the quick start guide]] and [[file:plugins.org][the plugins documentation]].
+** Writing your own xmobar in Haskell
 
-    It is possible to install xmobar as a library and use it to write your own
-    xmobar using Haskell instead of using a configuration file.  (This is very
-    similar to how [[http://xmonad.org][xmonad]] works.)
+   One can use ~xmobar~ as a regular program, via its configuration file,
+   without having to write any code. It also is possible to install xmobar as
+   a library and use it to write your own xmobar using Haskell instead of
+   using a configuration file.  (This is very similar to how [[http://xmonad.org][xmonad]] works.)
+   That gives you the ability of using Haskell and its libraries to extend
+   xmobar to your heart's content. If you are a programmer, take a look at
+   [[file:doc/using-haskell.org][here]] to learn more.
 
-    Make sure that ~ghc~ will be able to locate the xmobar library, e.g. with
+** Running xmobar in text mode
 
-    #+begin_src shell
-      cabal install --lib xmobar
-    #+end_src
+   By default, xmobar will run as an X11 application, in a docked
+   window, but it is possible to redirect xmobar's to the standard
+   output, optionally with color escape sequences.  In this mode,
+   xmobar can be run inside a terminal o console, or its output piped
+   to other applications, and there is no need for an X11 display
+   (so, for instance, you could pipe xmobar's output to a Wayland
+   application, such as swaybar.)
 
-    and then write your Haskell configuration and main function using the
-    functions and types exported in the library, which closely resemble those
-    used in configuration files.  Here's a small example:
+   To run xmobar in text mode, either pass the =-T= flag to its
+   invocation:
 
-    #+begin_src haskell
-      import Xmobar
+   #+begin_src shell
+     xmobar -T /path/to/config &
+   #+end_src
 
-      config :: Config
-      config =
-        defaultConfig
-          { font = "xft:Terminus-8",
-            allDesktops = True,
-            alpha = 200,
-            commands =
-              [ Run XMonadLog,
-                Run $ Memory ["t", "Mem: <usedratio>%"] 10,
-                Run $ Kbd [],
-                Run $ Date "%a %_d %b %Y <fc=#ee9a00>%H:%M:%S</fc>" "date" 10
-              ],
-            template = "%XMonadLog% }{ %kbd% | %date% | %memory%",
-            alignSep = "}{"
-          }
+   or set the parameter =textOutput= to True in its configuration.  You
+   can also specify the format of color escapes, for instance,
+   omitting them altogether with ~Plain~:
 
-      main :: IO ()
-      main = xmobar config
-    #+end_src
+   #+begin_src shell
+     xmobar -TPlain /path/to/config &
+   #+end_src
 
-    You can then for instance run =ghc --make xmobar.hs= to create a new xmobar
-    executable running exactly the monitors defined above.  Or put your
-    =xmobar.hs= program in =~/.config/xmobar/xmobar.hs= and, when running the
-    system-wide xmobar, it will notice that you have your own implementation
-    and (re)compile and run it as needed.  See also this [[./examples/xmobar.hs][extended example]].
+   Other options are ~Ansi~, ~Pango~, and ~Swaybar~.
 
-*** Running xmobar in text mode
+** Using xmobar in Wayland with swaybar or waybar
 
-    By default, xmobar will run as an X11 application, in a docked
-    window, but it is possible to redirect xmobar's to the standard
-    output, optionally with color escape sequences.  In this mode,
-    xmobar can be run inside a terminal o console, or its output piped
-    to other applications, and there is no need for an X11 display
-    (so, for instance, you could pipe xmobar's output to a Wayland
-    application, such as swaybar.)
+   In text mode, xmobar can be told to ouput its information using
+   pango markup for colors and fonts, and it that way you can use it
+   with swaybar or waybar, if you don't have actions or boxes in your
+   template.  Here's a minimal ~bar~ configuration for sway's
+   configuration file:
 
-    To run xmobar in text mode, either pass the =-T= flag to its
-    invocation:
+   #+begin_src conf
+     bar {
+     status_command xmobar -TPango
+     pango_markup enabled
+     }
+   #+end_src
 
-    #+begin_src shell
-      xmobar -T /path/to/config &
-    #+end_src
+   In case you want to use boxes around text or click actions in your
+   template, you can use instead the format ~Swaybar~, which supports
+   both.  This output format follows the JSON /swaybar-protocol/
+   defined by swaybar.  Configure it simply with:
 
-    or set the parameter =textOutput= to True in its configuration.  You
-    can also specify the format of color escapes, for instance,
-    omitting them altogether with ~Plain~:
-
-    #+begin_src shell
-      xmobar -TPlain /path/to/config &
-    #+end_src
-
-    Other options are ~Ansi~, ~Pango~, and ~Swaybar~.
-
-*** Using xmobar in Wayland with swaybar or waybar
-
-    In text mode, xmobar can be told to ouput its information using
-    pango markup for colors and fonts, and it that way you can use it
-    with swaybar or waybar, if you don't have actions or boxes in your
-    template.  Here's a minimal ~bar~ configuration for sway's
-    configuration file:
-
-    #+begin_src conf
-      bar {
-        status_command xmobar -TPango
-        pango_markup enabled
-      }
-    #+end_src
-
-    In case you want to use boxes around text or click actions in your
-    template, you can use instead the format ~Swaybar~, which supports
-    both.  This output format follows the JSON /swaybar-protocol/
-    defined by swaybar.  Configure it simply with:
-
-    #+begin_src conf
-      bar {
-        status_command xmobar -TSwaybar
-      }
-    #+end_src
+   #+begin_src conf
+     bar {
+     status_command xmobar -TSwaybar
+     }
+   #+end_src
 
 * Configuration and further Links
 
@@ -221,7 +185,7 @@ channel, ~#xmobar~, at [[ircs://irc.libera.chat][Libera]].
   - If you want to know how to contribute to the xmobar project, check out
     [[contributing.org][contributing]].
 
-  - If you want to write your own plugins, see [[./doc/write-your-own-plugin.org][Write your own plugin]].
+  - If you want to write your own plugins, see [[./doc/using-haskell.org#writing-a-plugin][writing a plugin]].
 
   - For elaborated examples of how to use xmobar as a Haskell library
     to create your monitors, see [[https://codeberg.org/jao/xmobar-config][this repo at jao/xmobar-config]].
@@ -264,9 +228,9 @@ channel, ~#xmobar~, at [[ircs://irc.libera.chat][Libera]].
 
 * License
 
-This software is released under a BSD-style license. See [[https://codeberg.org/xmobar/xmobar/src/branch/master/license][license]] for more
-details.
+  This software is released under a BSD-style license. See [[https://codeberg.org/xmobar/xmobar/src/branch/master/license][license]] for more
+  details.
 
-Copyright © 2010-2022 Jose Antonio Ortega Ruiz
+  Copyright © 2010-2022 Jose Antonio Ortega Ruiz
 
-Copyright © 2007-2010 Andrea Rossato
+  Copyright © 2007-2010 Andrea Rossato
